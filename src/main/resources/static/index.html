@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baza danych klientów</title>
+</head>
+<body>
+<h1>Jaką akcję chcesz wykonać?</h1>
+<h2>Dodanie klienta do bazy danych:</h2>
+<form action="addUser">
+    <input type="text" name="firstName" placeholder="Wpisz imię"><br>
+    <input type="text" name="lastName" placeholder="Wpisz nazwisko"><br>
+    <input type="number" name="age" placeholder="Wpisz wiek"><br>
+    <input type="submit" value="Dalej"><br>
+</form>
+<h2>Wyświetlenie klientów</h2>
+<form action="printUsers">
+<input type="submit"value="Wyświetl">
+</form>
+<h2>Usunięcie osoby z listy klientów</h2>
+<form action="removeUser">
+    <input type="text" name="firstNameDelete" placeholder="Wpisz imię"><br>
+    <input type="text" name="lastNameDelete" placeholder="Wpisz nazwisko"><br>
+    <input type="number" name="ageDelete" placeholder="Wpisz wiek"><br>
+    <input type="submit" value="Dalej"><br>
+</form>
+</body>
+</html>
