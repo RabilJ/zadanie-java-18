@@ -46,7 +46,9 @@ public class UserController {
     public String removeUser(@RequestParam(value = "firstNameDelete", required = false) String name,
                          @RequestParam(value = "lastNameDelete", required = false) String surname,
                          @RequestParam Integer ageDelete) {
-        if (ur.lookForUser(name, surname, ageDelete)) {
+        List<User> users = ur.getUsers();
+        User user = new User(name, surname,ageDelete);
+        if (users.remove(user)) {
             System.out.println("Usunięto użytkownika poprawnie");
             return "redirect:/successDelete.html";
         } else {
